@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientApp", "ClientApp", "{C5521AA9-E08A-4F23-83F7-1AC4BDA19CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Categoria.App", "Cadastro.Categoria.App\Cadastro.Categoria.App.csproj", "{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{70502480-5EC6-4DC4-87EA-2F59CF79CD04}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Categoria.WebApi", "Cadastro.Categoria.WebApi\Cadastro.Categoria.WebApi.csproj", "{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Categoria.Domain", "Cadastro.Categoria.Domain\Cadastro.Categoria.Domain.csproj", "{8D66612A-4ED6-417C-9ECE-C0A622D722EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Categoria.Infra.Data", "Cadastro.Categoria.Infra\Cadastro.Categoria.Infra.Data.csproj", "{F2DEFF68-8A2E-4C87-A3FC-1256DECCBA50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Categoria.Application", "Cadastro.Categoria.Application\Cadastro.Categoria.Application.csproj", "{AB156748-F8FC-4BF5-A331-4A2300F79DD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Categoria.Infra.CrossCutting.Ioc", "Cadastro.Categoria.Infra.CrossCutting.Ioc\Cadastro.Categoria.Infra.CrossCutting.Ioc.csproj", "{2E448E4C-C448-417F-954F-5666E1CD6A4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D66612A-4ED6-417C-9ECE-C0A622D722EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D66612A-4ED6-417C-9ECE-C0A622D722EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D66612A-4ED6-417C-9ECE-C0A622D722EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D66612A-4ED6-417C-9ECE-C0A622D722EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2DEFF68-8A2E-4C87-A3FC-1256DECCBA50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2DEFF68-8A2E-4C87-A3FC-1256DECCBA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2DEFF68-8A2E-4C87-A3FC-1256DECCBA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2DEFF68-8A2E-4C87-A3FC-1256DECCBA50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB156748-F8FC-4BF5-A331-4A2300F79DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB156748-F8FC-4BF5-A331-4A2300F79DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB156748-F8FC-4BF5-A331-4A2300F79DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB156748-F8FC-4BF5-A331-4A2300F79DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E448E4C-C448-417F-954F-5666E1CD6A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E448E4C-C448-417F-954F-5666E1CD6A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E448E4C-C448-417F-954F-5666E1CD6A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E448E4C-C448-417F-954F-5666E1CD6A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6} = {C5521AA9-E08A-4F23-83F7-1AC4BDA19CEC}
+		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
+		{8D66612A-4ED6-417C-9ECE-C0A622D722EB} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
+		{F2DEFF68-8A2E-4C87-A3FC-1256DECCBA50} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
+		{AB156748-F8FC-4BF5-A331-4A2300F79DD4} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
+		{2E448E4C-C448-417F-954F-5666E1CD6A4B} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://brsantos.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Cadastro.Categoria.App\\Cadastro.Categoria.App.csproj
+		SccProjectTopLevelParentUniqueName1 = Teste.sln
+		SccProjectName1 = Cadastro.Categoria.App
+		SccLocalPath1 = Cadastro.Categoria.App
+		SccProjectUniqueName2 = Cadastro.Categoria.Application\\Cadastro.Categoria.Application.csproj
+		SccProjectTopLevelParentUniqueName2 = Teste.sln
+		SccProjectName2 = Cadastro.Categoria.Application
+		SccLocalPath2 = Cadastro.Categoria.Application
+		SccProjectUniqueName3 = Cadastro.Categoria.Domain\\Cadastro.Categoria.Domain.csproj
+		SccProjectTopLevelParentUniqueName3 = Teste.sln
+		SccProjectName3 = Cadastro.Categoria.Domain
+		SccLocalPath3 = Cadastro.Categoria.Domain
+		SccProjectUniqueName4 = Cadastro.Categoria.Infra.CrossCutting.Ioc\\Cadastro.Categoria.Infra.CrossCutting.Ioc.csproj
+		SccProjectTopLevelParentUniqueName4 = Teste.sln
+		SccProjectName4 = Cadastro.Categoria.Infra.CrossCutting.Ioc
+		SccLocalPath4 = Cadastro.Categoria.Infra.CrossCutting.Ioc
+		SccProjectUniqueName5 = Cadastro.Categoria.Infra\\Cadastro.Categoria.Infra.Data.csproj
+		SccProjectTopLevelParentUniqueName5 = Teste.sln
+		SccProjectName5 = Cadastro.Categoria.Infra
+		SccLocalPath5 = Cadastro.Categoria.Infra
+		SccProjectUniqueName6 = Cadastro.Categoria.WebApi\\Cadastro.Categoria.WebApi.csproj
+		SccProjectTopLevelParentUniqueName6 = Teste.sln
+		SccProjectName6 = Cadastro.Categoria.WebApi
+		SccLocalPath6 = Cadastro.Categoria.WebApi
+	EndGlobalSection
+EndGlobal
