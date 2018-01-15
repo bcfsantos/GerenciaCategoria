@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Cadastro.Application.AutoMapper;
 using System.Web.Http;
-using System.Web.Routing;
+
 
 namespace Cadastro.Categoria.WebApi
 {
@@ -12,6 +9,12 @@ namespace Cadastro.Categoria.WebApi
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
+            AutoMapperConfig.RegisterMappings();
+
+            HttpConfiguration config = GlobalConfiguration.Configuration;
+            config.Formatters.JsonFormatter
+                .SerializerSettings
+                .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
         }
     }
 }
