@@ -27,6 +27,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{3F501E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{F619A33A-2383-4CB2-BB99-BD808F4F21E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Domain.Tests", "Cadastro.Domain.Tests\Cadastro.Domain.Tests.csproj", "{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{2E448E4C-C448-417F-954F-5666E1CD6A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E448E4C-C448-417F-954F-5666E1CD6A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E448E4C-C448-417F-954F-5666E1CD6A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,9 +78,10 @@ Global
 		{50FA57AA-9BB8-413A-A8B4-0BE9AFEA12BF} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
 		{3F501E32-12DF-4543-856D-181B1D754319} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
 		{F619A33A-2383-4CB2-BB99-BD808F4F21E1} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
+		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F} = {3F501E32-12DF-4543-856D-181B1D754319}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
+		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://brsantos.visualstudio.com/
 		SccLocalPath0 = .
@@ -102,5 +109,9 @@ Global
 		SccProjectTopLevelParentUniqueName6 = Teste.sln
 		SccProjectName6 = Cadastro.Categoria.Domain
 		SccLocalPath6 = Cadastro.Categoria.Domain
+		SccProjectUniqueName7 = Cadastro.Domain.Tests\\Cadastro.Domain.Tests.csproj
+		SccProjectTopLevelParentUniqueName7 = Teste.sln
+		SccProjectName7 = Cadastro.Domain.Tests
+		SccLocalPath7 = Cadastro.Domain.Tests
 	EndGlobalSection
 EndGlobal
