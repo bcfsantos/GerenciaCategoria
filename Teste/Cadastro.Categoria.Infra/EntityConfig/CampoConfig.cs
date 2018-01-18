@@ -24,6 +24,9 @@ namespace Cadastro.Infra.EntityConfig
             Property(c => c.Lista)
                .HasMaxLength(150);
 
+            Property(c => c.Ordem)
+                .IsRequired();
+
             HasRequired(t => t.SubCategoria)
                  .WithMany(t => t.Campos)
                  .HasForeignKey(d => d.IdSubCategoria);
