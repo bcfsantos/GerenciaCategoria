@@ -4,7 +4,7 @@ using Cadastro.Domain.Interfaces.Services;
 
 namespace Cadastro.Application
 {
-    public class CategoriaAppService : AppServiceBase<Categoria>, ICategoriaAppService
+    public class CategoriaAppService : AppServiceBase<Cadastro.Domain.Entities.Categoria>, ICategoriaAppService
     {
         private readonly ICategoriaService _categoriaService;
 

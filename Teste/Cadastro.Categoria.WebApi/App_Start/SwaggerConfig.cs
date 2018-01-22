@@ -1,13 +1,13 @@
 using System.Web.Http;
 using WebActivatorEx;
-using Cadastro.Categoria.WebApi;
+using Cadastro.WebApi;
 using Swashbuckle.Application;
 using System;
 using System.Xml.XPath;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace Cadastro.Categoria.WebApi
+namespace Cadastro.WebApi
 {
     public class SwaggerConfig
     {
@@ -27,7 +27,7 @@ namespace Cadastro.Categoria.WebApi
 
         private static string GetXmlCommentsPath()
         {
-            return System.String.Format(@"{0}bin\Cadastro.Categoria.WebApi.XML", System.AppDomain.CurrentDomain.BaseDirectory);
+            return System.String.Format(@"{0}bin\Cadastro.WebApi.XML", System.AppDomain.CurrentDomain.BaseDirectory);
         }
     }
 }

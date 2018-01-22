@@ -6,11 +6,13 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
-
-namespace Cadastro.Categoria.WebApi.Controllers
+namespace Cadastro.WebApi.Controllers
 {
+
     [RoutePrefix("api/categoria")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CategoriaController : ApiController
     {
         private readonly ICategoriaAppService _categoriaApp;
@@ -49,15 +51,15 @@ namespace Cadastro.Categoria.WebApi.Controllers
         /// <summary>
         /// Retorna as informações de uma determinada categoria.
         /// </summary>
-        /// <param name="id">Id da categoria.</param>
+        /// <param name="IdCategoria">Id da categoria.</param>
         /// <returns>Lista de Categoria, SubCategoria e Campos da SubCategoria.</returns>
-        [Route("{id}")]
+        [Route("{IdCategoria}")]
         [HttpGet]
-        public HttpResponseMessage GetId(int id)
+        public HttpResponseMessage GetId(int IdCategoria)
         {
             try
             {
-                var categoriaViewModel = Mapper.Map<Cadastro.Domain.Entities.Categoria, CategoriaViewModel>(_categoriaApp.GetId(id));
+                var categoriaViewModel = Mapper.Map<Cadastro.Domain.Entities.Categoria, CategoriaViewModel>(_categoriaApp.GetId(IdCategoria));
 
                 if (categoriaViewModel != null)
                     return Request.CreateResponse(HttpStatusCode.OK, categoriaViewModel);
@@ -102,13 +104,20 @@ namespace Cadastro.Categoria.WebApi.Controllers
         }
 
 
-        [Route("{id}")]
+
+        /// <summary>
+        /// Deletea a categoria selecionada por id
+        /// </summary>
+        /// <param name="IdCategoria">Id categoria a ser deletada</param>
+        /// <returns></returns>
+        [AllowAnonymous]
+        [Route("{IdCategoria}")]
         [HttpDelete]
-        public HttpResponseMessage Delete(int id)
+        public HttpResponseMessage Delete(int IdCategoria)
         {
             try
             {
-                var categoriaViewModel = _categoriaApp.GetId(id);
+                var categoriaViewModel = _categoriaApp.GetId(IdCategoria);
                 if (categoriaViewModel != null)
                 {
                     _categoriaApp.Remove(categoriaViewModel);

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace Cadastro.Categoria.WebApi
+namespace Cadastro.WebApi
 {
     public class BundleConfig
     {

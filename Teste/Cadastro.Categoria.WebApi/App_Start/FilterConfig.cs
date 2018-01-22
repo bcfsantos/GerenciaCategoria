@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace Cadastro.Categoria.WebApi
+namespace Cadastro.WebApi
 {
     public class FilterConfig
     {

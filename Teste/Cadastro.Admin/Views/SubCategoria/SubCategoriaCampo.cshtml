@@ -1,0 +1,81 @@
+﻿@model Cadastro.Admin.Models.SubCategoria
+@{
+    ViewBag.Title = "Vinculo SubCategoria com Campo";
+}
+
+@using (Html.BeginForm("CadastraSubCategoriaCampo", "SubCategoria", FormMethod.Post))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">Vinculo SubCategoria Campo</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            @Html.HiddenFor(x => x.IdSubCategoria);
+                            <label for="Slug">Campo:</label>
+                            @Html.DropDownList("IdCampo", new SelectList(ViewBag.ListaCampo, "IdCampo", "Descricao"), new { @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                    <div class="alert clearfix">
+                        <input type="submit" value="Cadastrar" class="btn btn-primary pull-right" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@using (Html.BeginForm("SubCategoriaCampo", "SubCategoria", FormMethod.Post))
+{
+    <div class="panel panel-default">
+        <div class="panel-heading">Campos</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <table class="table table-hover" id="tabela">
+                            <thead>
+                                <tr>
+                                    <th>Campo</th>
+                                    <th>Tipo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var campo in Model.SubCategoriaCampos.OrderBy(a => a.Ordem))
+                {
+                                    <tr>
+                                        <td>@campo.IdCampo</td>
+                                        <td>
+                                            @campo.IdSubCategoria
+                                        </td>
+                                        <td>
+                                            <a href="~/SubCategoria/ExcluirOpcao?idSubCategoria=@campo.IdSubCategoria&idCampo=@campo.IdCampo&ordem=@campo.Ordem" class="btn btn-danger pull-right excluir">Excluir</a>
+                                            @Html.Hidden("IdCampo", campo.IdCampo)
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                    <div class="alert clearfix">
+                        <input type="submit" value="Cadastrar" class="btn btn-primary pull-right" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

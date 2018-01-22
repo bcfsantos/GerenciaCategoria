@@ -1,0 +1,61 @@
+﻿@model IList<Cadastro.Admin.Models.SubCategoria>
+@{
+    ViewBag.Title = "Lista SubCategoria";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">SubCategorias cadastradas</div>
+    <div class="panel-body">
+        @if (Model != null)
+        {
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Descrição</th>
+                        <th>Slug</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var categoria in Model)
+                {
+                        <tr>
+                            <td>@categoria.IdCategoria</td>
+                            <td>
+                                @categoria.Descricao
+                            </td>
+                            <td>@categoria.Slug</td>
+                            <td>@categoria.IdCategoria</td>
+                            <td>
+                                <a name="btnVinculoCampo" href="~/SubCategoria/SubCategoriaCampo/@categoria.IdSubCategoria" class="btn btn-danger pull-right">Vinculo Campo</a>
+                            </td>
+                            <td>
+                                <a name="btnExcluir" href="~/SubCategoria/Excluir/@categoria.IdSubCategoria" class="btn btn-danger pull-right">Excluir</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+    </div>
+
+    <div class="alert clearfix">
+        @Html.ActionLink("Nova SubCategoria", "Cadastrar", "Categoria", new { @class = "btn btn-primary pull-right" })
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $().ready(function () {
+            $("[name=btnExcluir]").click(function () {
+                var confirmado = confirm("Tem certeza que deseja excluir á SubCategoria?");
+                if (confirmado) {
+                    location.href = $(this).attr("href");
+                }
+            });
+        });
+    </script>
+}

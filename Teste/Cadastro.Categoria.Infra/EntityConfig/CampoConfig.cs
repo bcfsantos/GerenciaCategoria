@@ -17,19 +17,16 @@ namespace Cadastro.Infra.EntityConfig
                 .IsRequired()
                 .HasMaxLength(100);
 
-            Property(c => c.Tipo)
-                .IsRequired()
-                .HasMaxLength(25);
-
             Property(c => c.Lista)
                .HasMaxLength(150);
 
-            Property(c => c.Ordem)
-                .IsRequired();
+            this.HasRequired(t => t.Tipo)
+                .WithMany(t => t.Campos)
+                .HasForeignKey(d => d.IdTipo);
 
-            HasRequired(t => t.SubCategoria)
-                 .WithMany(t => t.Campos)
-                 .HasForeignKey(d => d.IdSubCategoria);
+
+
+
         }
     }
 }

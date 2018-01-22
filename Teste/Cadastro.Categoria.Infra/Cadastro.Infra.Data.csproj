@@ -7,8 +7,8 @@
     <ProjectGuid>{F2DEFF68-8A2E-4C87-A3FC-1256DECCBA50}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cadastro.Categoria.Infra</RootNamespace>
-    <AssemblyName>Cadastro.Categoria.Infra</AssemblyName>
+    <RootNamespace>Cadastro.Infra</RootNamespace>
+    <AssemblyName>Cadastro.Infra</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -56,19 +56,18 @@
     <Compile Include="Context\TesteContext.cs" />
     <Compile Include="EntityConfig\CampoConfig.cs" />
     <Compile Include="EntityConfig\CategoriaConfig.cs" />
+    <Compile Include="EntityConfig\SubCategoriaCampoConfig.cs" />
     <Compile Include="EntityConfig\SubCategoriaConfig.cs" />
-    <Compile Include="Migrations\201801141334450_Teste1.cs" />
-    <Compile Include="Migrations\201801141334450_Teste1.Designer.cs">
-      <DependentUpon>201801141334450_Teste1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="EntityConfig\TipoConfig.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CampoRepository.cs" />
     <Compile Include="Repositories\CategoriaRepository.cs" />
     <Compile Include="Repositories\RepositoryBase.cs" />
+    <Compile Include="Repositories\SubCategoriaCampoRepository.cs" />
     <Compile Include="Repositories\SubCategoriaRepository.cs" />
+    <Compile Include="Repositories\TipoRepository.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Cadastro.Categoria.Domain\Cadastro.Domain.csproj">
       <Project>{8d66612a-4ed6-417c-9ece-c0a622d722eb}</Project>
@@ -78,11 +77,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201801141334450_Teste1.resx">
-      <DependentUpon>201801141334450_Teste1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

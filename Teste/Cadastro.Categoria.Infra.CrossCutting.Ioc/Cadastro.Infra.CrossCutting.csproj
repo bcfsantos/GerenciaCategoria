@@ -7,8 +7,8 @@
     <ProjectGuid>{2E448E4C-C448-417F-954F-5666E1CD6A4B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cadastro.Categoria.Infra.CrossCutting.Ioc</RootNamespace>
-    <AssemblyName>Cadastro.Categoria.Infra.CrossCutting.Ioc</AssemblyName>
+    <RootNamespace>Cadastro.Infra.CrossCutting</RootNamespace>
+    <AssemblyName>CadastroInfra.CrossCutting</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="Container.cs" />
+    <Compile Include="HelperSoa.cs" />
     <Compile Include="NinjectModulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

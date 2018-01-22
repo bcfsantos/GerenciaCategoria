@@ -1,7 +1,7 @@
 //[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(Cadastro.Categoria.Infra.CrossCutting.Ioc.App_Start.NinjectWebCommon), "Start")]
-//[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Cadastro.Categoria.Infra.CrossCutting.Ioc.App_Start.NinjectWebCommon), "Stop")]
+//[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(Cadastro.Infra.CrossCutting.Ioc.App_Start.NinjectWebCommon), "Stop")]
 
-namespace Cadastro.Categoria.Infra.CrossCutting.Ioc.App_Start
+namespace Cadastro.Infra.CrossCutting.Ioc.App_Start
 {
     using System;
     using System.Web;

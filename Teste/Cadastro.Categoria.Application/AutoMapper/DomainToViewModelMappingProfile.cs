@@ -16,7 +16,9 @@ namespace Cadastro.Application.AutoMapper
         {
             Mapper.CreateMap<CategoriaViewModel, Cadastro.Domain.Entities.Categoria>();
             Mapper.CreateMap<SubCategoriaViewModel, SubCategoria>();
+            Mapper.CreateMap<SubCategoriaCampoViewModel, SubCategoriaCampo>();
             Mapper.CreateMap<CampoViewModel, Campo>();
+            Mapper.CreateMap<TipoViewModel, Tipo>();
         }
 
     }

@@ -1,5 +1,6 @@
 namespace Cadastro.Categoria.Infra.Migrations
 {
+    using Domain.Entities;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -18,6 +19,16 @@ namespace Cadastro.Categoria.Infra.Migrations
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data.
+
+            context.Tipos.AddOrUpdate(
+                p => p.Descricao,
+                new Tipo { Descricao = "TextBox" },
+                new Tipo { Descricao = "TextArea" },
+                new Tipo { Descricao = "CheckBox" },
+                new Tipo { Descricao = "Inteiro" },
+                new Tipo { Descricao = "Decimal" },
+                new Tipo { Descricao = "DropDownList" }
+                );
         }
     }
 }

@@ -43,6 +43,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
@@ -63,11 +64,17 @@
     <Compile Include="Interface\ICampoAppService.cs" />
     <Compile Include="Interface\ICategoriaAppService.cs" />
     <Compile Include="Interface\ISubCategoriaAppService.cs" />
+    <Compile Include="Interface\ISubCategoriaCampoAppService.cs" />
+    <Compile Include="Interface\ITipoAppService.cs" />
     <Compile Include="SubCategoriaAppService.cs" />
+    <Compile Include="SubCategoriaCampoAppService.cs" />
+    <Compile Include="TipoAppService.cs" />
     <Compile Include="ViewModel\CampoViewModel.cs" />
     <Compile Include="ViewModel\CategoriaViewModel.cs" />
+    <Compile Include="ViewModel\SubCategoriaCampoViewModel.cs" />
     <Compile Include="ViewModel\SubCategoriaViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\TipoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cadastro.Categoria.Domain\Cadastro.Domain.csproj">

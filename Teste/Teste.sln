@@ -5,8 +5,6 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ClientApp", "ClientApp", "{C5521AA9-E08A-4F23-83F7-1AC4BDA19CEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Categoria.App", "Cadastro.Categoria.App\Cadastro.Categoria.App.csproj", "{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{70502480-5EC6-4DC4-87EA-2F59CF79CD04}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.WebApi", "Cadastro.Categoria.WebApi\Cadastro.WebApi.csproj", "{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}"
@@ -17,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Infra.Data", "Cada
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Categoria.Application", "Cadastro.Categoria.Application\Cadastro.Categoria.Application.csproj", "{AB156748-F8FC-4BF5-A331-4A2300F79DD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Infra.CrossCutting.Ioc", "Cadastro.Categoria.Infra.CrossCutting.Ioc\Cadastro.Infra.CrossCutting.Ioc.csproj", "{2E448E4C-C448-417F-954F-5666E1CD6A4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Infra.CrossCutting", "Cadastro.Categoria.Infra.CrossCutting.Ioc\Cadastro.Infra.CrossCutting.csproj", "{2E448E4C-C448-417F-954F-5666E1CD6A4B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{67112E06-068F-4F1D-A203-19D22A70CD99}"
 EndProject
@@ -29,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{F619A33A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Domain.Tests", "Cadastro.Domain.Tests\Cadastro.Domain.Tests.csproj", "{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Admin.App", "Cadastro.Admin.App\Cadastro.Admin.App.csproj", "{46CA8057-EFBD-4D76-A540-6F3CD44162E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Admin", "Cadastro.Admin\Cadastro.Admin.csproj", "{84378732-64C9-477B-B9EF-33EAFE99CBC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,16 +59,15 @@ Global
 		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46CA8057-EFBD-4D76-A540-6F3CD44162E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46CA8057-EFBD-4D76-A540-6F3CD44162E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46CA8057-EFBD-4D76-A540-6F3CD44162E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46CA8057-EFBD-4D76-A540-6F3CD44162E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84378732-64C9-477B-B9EF-33EAFE99CBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84378732-64C9-477B-B9EF-33EAFE99CBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84378732-64C9-477B-B9EF-33EAFE99CBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84378732-64C9-477B-B9EF-33EAFE99CBC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{324FB3DA-5299-46E0-A8F9-C89AB080EDC6} = {C5521AA9-E08A-4F23-83F7-1AC4BDA19CEC}
 		{FCB6BAEA-D77B-4F0E-AE54-E67C5E55A6DB} = {67112E06-068F-4F1D-A203-19D22A70CD99}
 		{8D66612A-4ED6-417C-9ECE-C0A622D722EB} = {3F501E32-12DF-4543-856D-181B1D754319}
 		{F2DEFF68-8A2E-4C87-A3FC-1256DECCBA50} = {F619A33A-2383-4CB2-BB99-BD808F4F21E1}
@@ -85,44 +78,40 @@ Global
 		{3F501E32-12DF-4543-856D-181B1D754319} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
 		{F619A33A-2383-4CB2-BB99-BD808F4F21E1} = {70502480-5EC6-4DC4-87EA-2F59CF79CD04}
 		{C3B00A0A-875E-4C29-9C4F-A1922DD09F9F} = {3F501E32-12DF-4543-856D-181B1D754319}
-		{46CA8057-EFBD-4D76-A540-6F3CD44162E0} = {C5521AA9-E08A-4F23-83F7-1AC4BDA19CEC}
+		{84378732-64C9-477B-B9EF-33EAFE99CBC7} = {C5521AA9-E08A-4F23-83F7-1AC4BDA19CEC}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://brsantos.visualstudio.com/
 		SccLocalPath0 = .
-		SccProjectUniqueName1 = Cadastro.Categoria.App\\Cadastro.Categoria.App.csproj
+		SccProjectUniqueName1 = Cadastro.Categoria.Application\\Cadastro.Categoria.Application.csproj
 		SccProjectTopLevelParentUniqueName1 = Teste.sln
-		SccProjectName1 = Cadastro.Categoria.App
-		SccLocalPath1 = Cadastro.Categoria.App
-		SccProjectUniqueName2 = Cadastro.Categoria.Application\\Cadastro.Categoria.Application.csproj
+		SccProjectName1 = Cadastro.Categoria.Application
+		SccLocalPath1 = Cadastro.Categoria.Application
+		SccProjectUniqueName2 = Cadastro.Categoria.WebApi\\Cadastro.WebApi.csproj
 		SccProjectTopLevelParentUniqueName2 = Teste.sln
-		SccProjectName2 = Cadastro.Categoria.Application
-		SccLocalPath2 = Cadastro.Categoria.Application
-		SccProjectUniqueName3 = Cadastro.Categoria.WebApi\\Cadastro.WebApi.csproj
+		SccProjectName2 = Cadastro.Categoria.WebApi
+		SccLocalPath2 = Cadastro.Categoria.WebApi
+		SccProjectUniqueName3 = Cadastro.Categoria.Infra\\Cadastro.Infra.Data.csproj
 		SccProjectTopLevelParentUniqueName3 = Teste.sln
-		SccProjectName3 = Cadastro.Categoria.WebApi
-		SccLocalPath3 = Cadastro.Categoria.WebApi
-		SccProjectUniqueName4 = Cadastro.Categoria.Infra\\Cadastro.Infra.Data.csproj
+		SccProjectName3 = Cadastro.Categoria.Infra
+		SccLocalPath3 = Cadastro.Categoria.Infra
+		SccProjectUniqueName4 = Cadastro.Categoria.Domain\\Cadastro.Domain.csproj
 		SccProjectTopLevelParentUniqueName4 = Teste.sln
-		SccProjectName4 = Cadastro.Categoria.Infra
-		SccLocalPath4 = Cadastro.Categoria.Infra
-		SccProjectUniqueName5 = Cadastro.Categoria.Infra.CrossCutting.Ioc\\Cadastro.Infra.CrossCutting.Ioc.csproj
+		SccProjectName4 = Cadastro.Categoria.Domain
+		SccLocalPath4 = Cadastro.Categoria.Domain
+		SccProjectUniqueName5 = Cadastro.Domain.Tests\\Cadastro.Domain.Tests.csproj
 		SccProjectTopLevelParentUniqueName5 = Teste.sln
-		SccProjectName5 = Cadastro.Categoria.Infra.CrossCutting.Ioc
-		SccLocalPath5 = Cadastro.Categoria.Infra.CrossCutting.Ioc
-		SccProjectUniqueName6 = Cadastro.Categoria.Domain\\Cadastro.Domain.csproj
+		SccProjectName5 = Cadastro.Domain.Tests
+		SccLocalPath5 = Cadastro.Domain.Tests
+		SccProjectUniqueName6 = Cadastro.Categoria.Infra.CrossCutting.Ioc\\Cadastro.Infra.CrossCutting.csproj
 		SccProjectTopLevelParentUniqueName6 = Teste.sln
-		SccProjectName6 = Cadastro.Categoria.Domain
-		SccLocalPath6 = Cadastro.Categoria.Domain
-		SccProjectUniqueName7 = Cadastro.Domain.Tests\\Cadastro.Domain.Tests.csproj
+		SccProjectName6 = Cadastro.Categoria.Infra.CrossCutting.Ioc
+		SccLocalPath6 = Cadastro.Categoria.Infra.CrossCutting.Ioc
+		SccProjectUniqueName7 = Cadastro.Admin\\Cadastro.Admin.csproj
 		SccProjectTopLevelParentUniqueName7 = Teste.sln
-		SccProjectName7 = Cadastro.Domain.Tests
-		SccLocalPath7 = Cadastro.Domain.Tests
-		SccProjectUniqueName8 = Cadastro.Admin.App\\Cadastro.Admin.App.csproj
-		SccProjectTopLevelParentUniqueName8 = Teste.sln
-		SccProjectName8 = Cadastro.Admin.App
-		SccLocalPath8 = Cadastro.Admin.App
+		SccProjectName7 = Cadastro.Admin
+		SccLocalPath7 = Cadastro.Admin
 	EndGlobalSection
 EndGlobal

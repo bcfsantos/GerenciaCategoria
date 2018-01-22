@@ -6,8 +6,7 @@ namespace Cadastro.Domain.Entities
     {
         public SubCategoria()
         {
-            this.Campos = new List<Campo>();
-            this.Categoria = new Categoria();
+            this.SubCategoriaCampos = new List<SubCategoriaCampo>();
         }
         public int IdSubCategoria { get; set; }
         public string Descricao { get; set; }
@@ -16,7 +15,7 @@ namespace Cadastro.Domain.Entities
         public int IdCategoria { get; set; }
         public virtual Categoria Categoria { get; set; }
 
-        public virtual ICollection<Campo> Campos { get; set; }
+        public virtual ICollection<SubCategoriaCampo> SubCategoriaCampos { get; set; }
 
 
     }

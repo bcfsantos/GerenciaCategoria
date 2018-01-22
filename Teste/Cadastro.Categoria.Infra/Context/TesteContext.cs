@@ -16,6 +16,8 @@ namespace Cadastro.Infra.Context
         public DbSet<Cadastro.Domain.Entities.Categoria> Clientes { get; set; }
         public DbSet<SubCategoria> SubCategorias { get; set; }
         public DbSet<Campo> Campos { get; set; }
+        public DbSet<Tipo> Tipos { get; set; }
+        public DbSet<SubCategoriaCampo> SubCategoriaCampos { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -32,6 +34,8 @@ namespace Cadastro.Infra.Context
             modelBuilder.Configurations.Add(new CategoriaConfig());
             modelBuilder.Configurations.Add(new SubCategoriaConfig());
             modelBuilder.Configurations.Add(new CampoConfig());
+            modelBuilder.Configurations.Add(new TipoConfig());
+            modelBuilder.Configurations.Add(new SubCategoriaCampoConfig());
 
             base.OnModelCreating(modelBuilder);
         }

@@ -18,9 +18,11 @@ namespace Cadastro.Application.AutoMapper
 
         protected override void Configure()
         {
-            Mapper.CreateMap<Cadastro.Domain.Entities.Categoria, CategoriaViewModel>();
+            Mapper.CreateMap<Categoria, CategoriaViewModel>();
             Mapper.CreateMap<SubCategoria, SubCategoriaViewModel>();
+            Mapper.CreateMap<SubCategoriaCampo, SubCategoriaCampoViewModel>();
             Mapper.CreateMap<Campo, CampoViewModel>();
+            Mapper.CreateMap<Tipo, TipoViewModel>();
         }
      
      

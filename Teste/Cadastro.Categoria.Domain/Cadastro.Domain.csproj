@@ -7,8 +7,8 @@
     <ProjectGuid>{8D66612A-4ED6-417C-9ECE-C0A622D722EB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Cadastro.Categoria.Domain</RootNamespace>
-    <AssemblyName>Cadastro.Categoria.Domain</AssemblyName>
+    <RootNamespace>Cadastro.Domain</RootNamespace>
+    <AssemblyName>Cadastro.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
@@ -37,10 +37,16 @@
     <Compile Include="Entities\Campo.cs" />
     <Compile Include="Entities\Categoria.cs" />
     <Compile Include="Entities\SubCategoria.cs" />
+    <Compile Include="Entities\SubCategoriaCampo.cs" />
+    <Compile Include="Entities\Tipo.cs" />
     <Compile Include="Interfaces\Repositories\ICampoRepository.cs" />
     <Compile Include="Interfaces\Repositories\ICategoriaRepository.cs" />
     <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\ISubCategoriaCampoRepository.cs" />
     <Compile Include="Interfaces\Repositories\ISubCategoriaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITipoRepository.cs" />
+    <Compile Include="Interfaces\Services\ISubCategoriaCampoService.cs" />
+    <Compile Include="Interfaces\Services\ITipoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Interfaces\Services\ICampoService.cs" />
     <Compile Include="Interfaces\Services\ICategoriaService.cs" />
@@ -49,7 +55,9 @@
     <Compile Include="Services\CampoService.cs" />
     <Compile Include="Services\CategoriaService.cs" />
     <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Services\SubCategoriaCampoService.cs" />
     <Compile Include="Services\SubCategoriaService.cs" />
+    <Compile Include="Services\TipoService.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

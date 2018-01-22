@@ -1,0 +1,59 @@
+﻿@model IList<Cadastro.Admin.Models.Campo>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Categorias cadastradas</div>
+    <div class="panel-body">
+        @if (Model != null)
+        {
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Descrição</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var campo in Model)
+                {
+                        <tr>
+                            <td>@campo.IdCampo</td>
+                            <td>
+                                @campo.Descricao
+                            </td>
+                            <td>
+                                <a name="btnExcluir" href="~/Categoria/Excluir/@campo.IdCampo" class="btn btn-danger pull-right">Excluir</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+
+    </div>
+
+    <div class="alert clearfix">
+        @Html.ActionLink("Nova Campo", "Cadastrar", "Campo", new { @class = "btn btn-primary pull-right" })
+    </div>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        $().ready(function () {
+            $("[name=btnExcluir]").click(function () {
+                var confirmado = confirm("Tem certeza que deseja excluir o campo?");
+                if (confirmado) {
+                    location.href = $(this).attr("href");
+                }
+            });
+        });
+    </script>
+}
+
+
+
+

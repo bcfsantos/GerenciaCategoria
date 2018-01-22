@@ -3,6 +3,7 @@ using Cadastro.Infra.Context;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 
 namespace Cadastro.Infra.Repositories
@@ -14,7 +15,30 @@ namespace Cadastro.Infra.Repositories
         public void Add(T obj)
         {
             Db.Set<T>().Add(obj);
-            Db.SaveChanges();
+
+           // Db.SaveChanges();
+
+
+            try
+            {
+                //seu código
+
+                Db.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                foreach (var eve in e.EntityValidationErrors)
+                {
+                    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+                        eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                    foreach (var ve in eve.ValidationErrors)
+                    {
+                        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                            ve.PropertyName, ve.ErrorMessage);
+                    }
+                }
+                throw;
+            }
         }
 
         public IEnumerable<T> GetAll()
