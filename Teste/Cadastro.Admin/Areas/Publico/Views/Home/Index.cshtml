@@ -22,19 +22,30 @@
 </div>
 
 
-<div id="teste"></div>
+<div id="dvForm">
+
+</div>
 @section scripts
 {
     <script type="text/javascript">
         $().ready(function () {
             $("#btnFormulario").click(function () {
                 $.ajax({
-                    type: 'Post',
-                    url: '/Formulario/index',
-                    data: { subCategoriaSlug: $('#subCategoriaSlug :selected').val(), categoriaSlug: $('#subCategoriaSlug :selected').text() },
+                    type: 'GET',
+                    url: '/Publico/Home/Formulario/',// + $('#subCategoriaSlug :selected').val() + '/' + $('#subCategoriaSlug :selected').text(),
+                   data: { subCategoriaSlug: $('#subCategoriaSlug :selected').val(), categoriaSlug: $('#subCategoriaSlug :selected').text() },
                     cache: false,
                     success: function (result) {
-                      
+                        alert(1);
+                        //$('#dvForm').html(result);
+                    },
+                    error: function (request, status, error) {
+                        console.log(request.statusText);
+                        console.log(request.responseText);
+                        console.log(status);
+                        console.log(error);
+
+                        //alert("Ocorreu um erro ao Pesquisar os contatos!" + " | " + request.responseText + " | " + request.status);
                     }
                 });
             });

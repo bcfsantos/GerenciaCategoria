@@ -11,7 +11,7 @@ namespace Cadastro.Infra.Context
         public TesteContext()
             : base("TesteContext")
         {
-            Database.SetInitializer<TesteContext>(new CreateDatabaseIfNotExists<TesteContext>());
+           // Database.SetInitializer<TesteContext>(new CreateDatabaseIfNotExists<TesteContext>());
         }
         public DbSet<Cadastro.Domain.Entities.Categoria> Clientes { get; set; }
         public DbSet<SubCategoria> SubCategorias { get; set; }

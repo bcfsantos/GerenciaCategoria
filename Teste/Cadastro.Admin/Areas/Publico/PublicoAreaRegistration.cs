@@ -14,6 +14,14 @@ namespace Cadastro.Admin.Areas.Publico
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
+
+            //context.MapRoute(
+            //        "Caegoria",
+            //        "{slugCategoria}/{slugSubCategoria}", 
+            //        new { controller = "Formulario", action = "Index" },
+            //        namespaces: new[] { "Cadastro.Admin.Areas.Publico.Controllers" }
+            //        );
+
             context.MapRoute(
                 "Publico_default",
                 "Publico/{controller}/{action}/{id}",
