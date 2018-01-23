@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="panel panel-default">
+    <div class="panel-heading">Escolha seu formulário</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="Descricao">Slug:</label>
+                    @Html.DropDownList("subCategoriaSlug", ViewBag.ListaCategoria as SelectList, new { @class = "form-control" })
+
+                </div>
+            </div>
+            <div class="alert clearfix">
+                <input type="button" id="btnFormulario" value="Gerar Formulário" class="btn btn-primary pull-right" />
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="teste"></div>
+@section scripts
+{
+    <script type="text/javascript">
+        $().ready(function () {
+            $("#btnFormulario").click(function () {
+                $.ajax({
+                    type: 'Post',
+                    url: '/Formulario/index',
+                    data: { subCategoriaSlug: $('#subCategoriaSlug :selected').val(), categoriaSlug: $('#subCategoriaSlug :selected').text() },
+                    cache: false,
+                    success: function (result) {
+                      
+                    }
+                });
+            });
+        });
+    </script>
+}

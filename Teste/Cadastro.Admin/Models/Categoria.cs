@@ -1,4 +1,5 @@
 ﻿
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Cadastro.Admin.Models
@@ -7,13 +8,14 @@ namespace Cadastro.Admin.Models
     {
         public Categoria()
         {
-
+            this.SubCategoria = new List<SubCategoria>();
         }
+
+
         public int IdCategoria { get; set; }
-        [Required(ErrorMessage = "Preencha o campo Descrição", AllowEmptyStrings = false)]
         public string Descricao { get; set; }
-        [Required(ErrorMessage = "Preencha o campo Slug", AllowEmptyStrings = false)]
         public string Slug { get; set; }
+        public virtual ICollection<SubCategoria> SubCategoria { get; set; }
 
     }
 }

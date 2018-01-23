@@ -76,6 +76,34 @@ namespace Cadastro.WebApi.Controllers
 
         }
 
+        /// <summary>
+        /// Retorna as informações de uma determinada subcategoria.
+        /// </summary>
+        /// <param name="slugSubCategoria">Slug da SubCategoria</param>
+        /// <param name="slugCategoria">Slug da Categoria</param>
+        /// <returns></returns>
+        [Route("{slugSubCategoria}/{slugCategoria}")]
+        [HttpGet]
+        public HttpResponseMessage GetSlug(string slugSubCategoria, string slugCategoria)
+        {
+            try
+            {
+
+                var subcategoriaViewModel = Mapper.Map<SubCategoria, SubCategoriaViewModel>(_subcategoriaApp.GetSubCategoriaSlug(slugSubCategoria, slugCategoria));
+
+                if (subcategoriaViewModel != null)
+                    return Request.CreateResponse(HttpStatusCode.OK, subcategoriaViewModel);
+                else
+                    return Request.CreateResponse(HttpStatusCode.NoContent);
+
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateErrorResponse(HttpStatusCode.InternalServerError, ex);
+            }
+
+        }
+
 
         /// <summary>
         /// Inclui uma nova subcategoria.

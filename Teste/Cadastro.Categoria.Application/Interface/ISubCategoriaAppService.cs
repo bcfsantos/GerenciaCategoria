@@ -4,6 +4,6 @@ namespace Cadastro.Application.Interface
 {
     public interface ISubCategoriaAppService : IAppServiceBase<SubCategoria>
     {
-
+        SubCategoria GetSubCategoriaSlug(string slugSubCategoria, string slugCategoria);
     }
 }

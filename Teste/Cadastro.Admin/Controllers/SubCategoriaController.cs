@@ -67,15 +67,29 @@ namespace Cadastro.Admin.Controllers
         }
 
 
+        [AcceptVerbs("GET", "DELETE")]
+        public ActionResult ExcluirSubCategoriaCampo(int idSubCategoria, int idCampo, int ordem)
+        {
+
+            var excluiCategoria = HelperSOA.CallApi(string.Format("{0}/{1}/{2}/{3}", ApiSubCategoriaCampo, idSubCategoria, idCampo, ordem), "DELETE", string.Empty, string.Empty);
+            if (excluiCategoria.StatusCode == HttpStatusCode.OK)
+                return RedirectToAction("SubCategoriaCampo", new { id = idSubCategoria });
+            else
+                return RedirectToAction("Index");
+
+        }
+
         [HttpGet]
-        public ActionResult SubCategoriaCampo(int IdSubCategoria)
+        public ActionResult SubCategoriaCampo(int id)
         {
             PreencheDropDrownListCampo();
 
-            var listaCampo = HelperSOA.CallApi(ApiCampo, WebRequestMethods.Http.Get, IdSubCategoria.ToString(), string.Empty);
-            if (listaCampo.StatusCode == HttpStatusCode.OK)
-                return View(JsonConvert.DeserializeObject<IList<Campo>>(listaCampo.Response));
-            
+            var listaSubCategoria = HelperSOA.CallApi(Api, WebRequestMethods.Http.Get, id.ToString(), string.Empty);
+            if (listaSubCategoria.StatusCode == HttpStatusCode.OK)
+            {
+                var subCategoria = JsonConvert.DeserializeObject<List<SubCategoria>>(listaSubCategoria.Response);
+                return View(subCategoria.FirstOrDefault());
+            }
             return View();
         }
 
@@ -86,7 +100,7 @@ namespace Cadastro.Admin.Controllers
             {
                 var subcadastraCategoriaCampo = HelperSOA.CallApi(ApiSubCategoriaCampo, WebRequestMethods.Http.Post, JsonConvert.SerializeObject(subCategoriaCampo), string.Empty);
                 if (subcadastraCategoriaCampo.StatusCode == HttpStatusCode.Created)
-                    return RedirectToAction("Index");
+                    return RedirectToAction("SubCategoriaCampo", new { id = subCategoriaCampo.IdSubCategoria });
                 else
                 {
                     return View("Index");
@@ -113,7 +127,8 @@ namespace Cadastro.Admin.Controllers
             if (listaCampos.StatusCode == HttpStatusCode.OK)
                 campos = JsonConvert.DeserializeObject<List<Campo>>(listaCampos.Response);
 
-            ViewBag.ListaCampo = new SelectList(campos.Select(c => new { c.IdCampo, c.Descricao }).ToList(), "IdCampo", "Descricao");
+            //ViewBag.ListaCampo = new SelectList(campos.Select(c => new { c.IdCampo, c.Descricao }).ToList(), "IdCampo", "Descricao");
+            ViewBag.ListaCampo = new SelectList(campos, "IdCampo", "Descricao");
         }
 
 

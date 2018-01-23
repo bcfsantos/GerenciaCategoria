@@ -9,5 +9,9 @@ namespace Cadastro.Domain.Interfaces.Services
 {
     public interface ISubCategoriaCampoService : IServiceBase<SubCategoriaCampo>
     {
+        IList<SubCategoriaCampo> GetIdSubCategoria(int IdSubcategoria);
+
+        void AddSubCategoriaCampoOrdem(SubCategoriaCampo subCategoriaCampo);
+        SubCategoriaCampo GetIdSubCategoriaCampoOrdem(int IdSubCategoria, int IdCampo, int Ordem);
     }
 }

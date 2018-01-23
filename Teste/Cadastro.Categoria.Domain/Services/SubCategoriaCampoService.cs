@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Cadastro.Domain.Services
 {
-   public class SubCategoriaCampoService : ServiceBase<SubCategoriaCampo>, ISubCategoriaCampoService
+    public class SubCategoriaCampoService : ServiceBase<SubCategoriaCampo>, ISubCategoriaCampoService
     {
         private readonly ISubCategoriaCampoRepository _subCategoriaCampoRepository;
 
@@ -17,6 +17,31 @@ namespace Cadastro.Domain.Services
             : base(subCategoriaCampoRepository)
         {
             _subCategoriaCampoRepository = subCategoriaCampoRepository;
+        }
+
+        public void AddSubCategoriaCampoOrdem(SubCategoriaCampo subCategoriaCampo)
+        {
+            var ordem = GetIdSubCategoria(subCategoriaCampo.IdSubCategoria);
+            if (ordem.Count() > 0)
+            {
+                subCategoriaCampo.Ordem = ordem.Max(c => c.Ordem) + 1;
+                _subCategoriaCampoRepository.Add(subCategoriaCampo);
+            }
+            else
+            {
+                subCategoriaCampo.Ordem = 1;
+                _subCategoriaCampoRepository.Add(subCategoriaCampo);
+            }
+        }
+
+        public IList<SubCategoriaCampo> GetIdSubCategoria(int IdSubcategoria)
+        {
+            return _subCategoriaCampoRepository.GetIdSubCategoria(IdSubcategoria);
+        }
+
+        public SubCategoriaCampo GetIdSubCategoriaCampoOrdem(int IdSubCategoria, int IdCampo, int Ordem)
+        {
+            return _subCategoriaCampoRepository.GetIdSubCategoriaCampoOrdem(IdSubCategoria, IdCampo, Ordem);
         }
     }
 }

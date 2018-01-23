@@ -16,9 +16,9 @@ namespace Cadastro.Infra.EntityConfig
 
             Ignore(x => x.IdCampo);
 
-            HasMany(c => c.Campos)
-                .WithRequired(c => c.Tipo)
-                .HasForeignKey(c => c.IdTipo);
+            //HasMany(c => c.Campos)
+            //    .WithRequired(c => c.Tipo)
+            //    .HasForeignKey(c => c.IdTipo);
 
         }
 

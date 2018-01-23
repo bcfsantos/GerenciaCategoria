@@ -92,7 +92,7 @@ namespace Cadastro.WebApi.Controllers
                 if (ModelState.IsValid)
                 {
                     var subCategoriaCampoViewModel = Mapper.Map<SubCategoriaCampoViewModel, SubCategoriaCampo>(subCategoriaCampo);
-                    _subCategoriaCampoApp.Add(subCategoriaCampoViewModel);
+                    _subCategoriaCampoApp.AddSubCategoriaCampoOrdem(subCategoriaCampoViewModel);
                     return Request.CreateResponse(HttpStatusCode.Created);
                 }
                 else
@@ -109,26 +109,21 @@ namespace Cadastro.WebApi.Controllers
 
 
         /// <summary>
-        /// Deletea a subCategoriaCampo selecionada por id
+        /// Deleta vinculo da subcategoria com o campo
         /// </summary>
-        /// <param name="IdsubCategoriaCampo">Id subCategoriaCampo a ser deletada</param>
+        /// <param name="IdSubCategoria">Id subcategoria</param>
+        /// <param name="IdCampo">Id do campo</param>
+        /// <param name="Ordem">Ordem do campo</param>
         /// <returns></returns>
         [AllowAnonymous]
-        [Route("{IdsubCategoriaCampo}")]
+        [Route("{IdSubCategoria}/{IdCampo}/{Ordem}")]
         [HttpDelete]
-        public HttpResponseMessage Delete(int IdsubCategoriaCampo)
+        public HttpResponseMessage Delete(int IdSubCategoria, int IdCampo, int Ordem)
         {
             try
             {
-                var subCategoriaCampoViewModel = _subCategoriaCampoApp.GetId(IdsubCategoriaCampo);
-                if (subCategoriaCampoViewModel != null)
-                {
-                    _subCategoriaCampoApp.Remove(subCategoriaCampoViewModel);
-                    return Request.CreateResponse(HttpStatusCode.OK, subCategoriaCampoViewModel);
-                }
-                else
-                    return Request.CreateResponse(HttpStatusCode.NoContent);
-
+                _subCategoriaCampoApp.RemoveSubcategoriaCampos(IdSubCategoria, IdCampo, Ordem);
+                return Request.CreateResponse(HttpStatusCode.OK);
             }
             catch (Exception ex)
             {

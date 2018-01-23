@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Cadastro.Application
 {
-   public class SubCategoriaAppService : AppServiceBase<SubCategoria>, ISubCategoriaAppService
+    public class SubCategoriaAppService : AppServiceBase<SubCategoria>, ISubCategoriaAppService
     {
         private readonly ISubCategoriaService _subCategoria;
 
@@ -17,6 +17,11 @@ namespace Cadastro.Application
             : base(subCategoria)
         {
             _subCategoria = subCategoria;
+        }
+
+        public SubCategoria GetSubCategoriaSlug(string slugSubCategoria, string slugCategoria)
+        {
+            return _subCategoria.GetSubCategoriaSlug(slugSubCategoria, slugCategoria);
         }
     }
 }

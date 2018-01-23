@@ -19,5 +19,26 @@ namespace Cadastro.Application
         {
             _subCategoriaCampoService = subCategoriaCampoService;
     }
-}
+
+        public void AddSubCategoriaCampoOrdem(SubCategoriaCampo subCategoriaCampo)
+        {
+            _subCategoriaCampoService.AddSubCategoriaCampoOrdem(subCategoriaCampo);
+        }
+
+        public IList<SubCategoriaCampo> GetIdSubCategoria(int IdSubcategoria)
+        {
+            return _subCategoriaCampoService.GetIdSubCategoria(IdSubcategoria);
+        }
+
+        public SubCategoriaCampo GetIdSubCategoriaCampoOrdem(int IdSubCategoria, int IdCampo, int Ordem)
+        {
+            return _subCategoriaCampoService.GetIdSubCategoriaCampoOrdem(IdSubCategoria, IdCampo, Ordem);
+        }
+
+        public void RemoveSubcategoriaCampos(int IdSubCategoria, int IdCampo, int Ordem)
+        {
+            var subcategoriacampo = GetIdSubCategoriaCampoOrdem(IdSubCategoria, IdCampo, Ordem);
+            _subCategoriaCampoService.Remove(subcategoriacampo);
+        }
+    }
 }

@@ -9,5 +9,8 @@ namespace Cadastro.Domain.Interfaces.Repositories
 {
     public interface ISubCategoriaCampoRepository : IRepositoryBase<SubCategoriaCampo>
     {
+        IList<SubCategoriaCampo> GetIdSubCategoria(int IdSubcategoria);
+
+        SubCategoriaCampo GetIdSubCategoriaCampoOrdem(int IdSubCategoria, int IdCampo, int Ordem);
     }
 }

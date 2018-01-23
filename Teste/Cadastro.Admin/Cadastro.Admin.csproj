@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.3.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Bin\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -213,6 +217,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Publico\Controllers\FormularioController.cs" />
+    <Compile Include="Areas\Publico\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Publico\PublicoAreaRegistration.cs" />
     <Compile Include="Controllers\CampoController.cs" />
     <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -245,6 +252,11 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Areas\Publico\Views\web.config" />
+    <Content Include="Areas\Publico\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Publico\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Publico\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Publico\Views\Formulario\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -278,6 +290,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Publico\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -288,6 +301,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Cadastro.Categoria.Application\Cadastro.Categoria.Application.csproj">
+      <Project>{AB156748-F8FC-4BF5-A331-4A2300F79DD4}</Project>
+      <Name>Cadastro.Categoria.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Cadastro.Categoria.Infra.CrossCutting.Ioc\Cadastro.Infra.CrossCutting.csproj">
       <Project>{2E448E4C-C448-417F-954F-5666E1CD6A4B}</Project>
       <Name>Cadastro.Infra.CrossCutting</Name>
